@@ -9,7 +9,7 @@ import { Products } from './products';
 })
 export class NgserviceService {
 
-  constructor(private _http:HttpClient) { }
+  constructor(public _http:HttpClient) { }
   fetchProductListFromRemote():Observable<any>{
     return this._http.get<any>("https://product-services-system.herokuapp.com/getproductList"); 
   }
